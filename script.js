@@ -1,5 +1,16 @@
 let input = document.querySelector("#input");
 let taskList = document.querySelector(".tasks");
+let theme = document.getElementById("style").href;
+
+function changeTheme() {
+  let theme = document.getElementById("style");
+  let currentTheme = theme.href;
+  let newTheme = currentTheme.includes("dark-theme.css")
+    ? "light-theme.css"
+    : "dark-theme.css";
+
+  theme.href = newTheme;
+}
 
 function addTask() {
   event.preventDefault();

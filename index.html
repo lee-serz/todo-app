@@ -10,10 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dark-theme.css" id="style" />
   </head>
   <body>
     <div class="container">
+      <header>
+        <div class="logo">TODO</div>
+        <div onclick="changeTheme()" class="theme">light theme</div>
+      </header>
       <div class="todo">
         <form id="form">
           <input id="input" placeholder="Добавить задачу..." />
