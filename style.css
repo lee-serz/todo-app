@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+}
+
+body {
+  background-color: #14151b;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  padding: 0px 10px;
+  margin: 100px auto 0;
+}
+
+.todo {
+  width: 100%;
+  border-radius: 10px;
+  background: #272a3e;
+  padding: 60px 130px;
+}
+
+form {
+  width: 100%;
+  height: 75px;
+  max-width: 900px;
+  display: flex;
+  border-radius: 10px;
+  background: #272a3e;
+  margin-bottom: 50px;
+}
+
+form input {
+  flex-grow: 1;
+  background: #393d56;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  outline: none;
+  padding-left: 50px;
+  transition: all 0.2s linear;
+}
+
+form input:focus {
+  background: #2e3141;
+}
+
+form button {
+  font-weight: bold;
+  min-width: 100px;
+  background-color: #557aff;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+form button:hover {
+  background-color: #4465db;
+}
+
+ul {
+}
+
+li {
+  font-size: 18px;
+  list-style: none;
+  padding: 10px;
+  margin: 0px 0px 50px 65px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -65px;
+  width: 50px;
+  height: 50px;
+  background-image: url(img/unchecked.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.check {
+  color: #868686;
+  text-decoration: line-through;
+}
+
+.check::before {
+  background-image: url(img/check.svg);
+}
+
+span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 38px;
+  line-height: 36px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+span:hover {
+  color: #14151b;
+}
+
+@media (max-width: 768px) {
+  .todo {
+    padding: 60px 10px;
+  }
+
+  form input {
+    width: 100%;
+    outline: none;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  form button {
+    min-width: 70px;
+  }
+}
