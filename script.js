@@ -4,11 +4,17 @@ let theme = document.getElementById("style").href;
 
 function changeTheme() {
   let theme = document.getElementById("style");
+  let themeName = document.querySelector(".theme");
   let currentTheme = theme.href;
   let newTheme = currentTheme.includes("dark-theme.css")
     ? "light-theme.css"
     : "dark-theme.css";
 
+  let newText = currentTheme.includes("dark-theme.css")
+    ? "dark theme"
+    : "light theme";
+
+  themeName.innerHTML = newText;
   theme.href = newTheme;
 }
 

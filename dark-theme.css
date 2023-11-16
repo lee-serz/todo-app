@@ -92,13 +92,32 @@ form button:hover {
 }
 
 ul {
+  padding-top: 5px;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+ul::-webkit-scrollbar {
+  width: 3px; /* ширина всей полосы прокрутки */
+}
+
+ul::-webkit-scrollbar-track {
+}
+
+ul::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* округлось бегунка */
+  border: 3px solid #557aff; /* отступ вокруг бегунка */
+}
+
+ul::-webkit-scrollbar:horizontal {
+  display: none;
 }
 
 li {
-  font-size: 18px;
+  font-size: 20px;
   list-style: none;
   padding: 10px;
-  margin: 0px 0px 50px 65px;
+  margin: 0px 0px 15px 65px;
   position: relative;
   display: flex;
   align-items: center;
@@ -108,10 +127,10 @@ li {
 li::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 7px;
   left: -65px;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   background-image: url(img/unchecked.svg);
   background-size: cover;
   background-position: center;
@@ -136,15 +155,20 @@ span {
   line-height: 36px;
   text-align: center;
   transition: all 0.2s linear;
+  color: #444864;
 }
 
 span:hover {
-  color: #14151b;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
+  header {
+    margin-bottom: 15px;
+  }
+
   .todo {
-    padding: 60px 10px;
+    padding: 20px 10px;
   }
 
   form input {
